@@ -1,0 +1,8 @@
+docker build -t node:latest ./
+
+docker create --name node-service -p 9999:9999 node:latest; docker start node-service
+
+docker create --name node-service -p 9999:9999 -v `pwd`:/nodejs/apps node:latest; docker start node-service
+
+docker create --name node-service -p 9999:9999 -v `pwd`:/nodejs/apps  --link eureka-server1 node:latest; docker start node-service
+

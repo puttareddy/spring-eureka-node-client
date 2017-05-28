@@ -1,0 +1,70 @@
+{
+  "eurekaServer": {
+	"host": "172.17.0.2",
+   	"port": 8080
+   },
+  "usingAWSDataCenter" :true,
+  "usingOwnDataCenter" :false, 	  
+  "awsMetaData" : {
+            "instance": {
+                "hostName": "172.17.0.4",
+                "app": "",
+                "ipAddr": "172.17.0.3",
+                "vipAddress": "172.17.0.3:3000/data-services",
+                "secureVipAddress": null,
+                "status": "UP",
+                "port": {
+                    "$": "",
+                    "@enabled": true
+                },
+                "securePort": null,
+                "healthCheckUrl": null,
+                "statusPageUrl": null,
+                "leaseInfo": {
+                    "evictionDurationInSecs": 90
+                },
+                "dataCenterInfo": {
+                    "@class": "com.netflix.appinfo.AmazonInfo",
+                    "name": "Amazon",
+                    "metadata": {
+                        "ami-launch-index": "2",
+                        "local-hostname": "ip-172-31-25-10.us-west-2.compute.internal",
+                        "availability-zone": "conf.awsMetaData.availabilityZone",
+                        "instance-id": "iabcd-23",
+                        "public-ipv4": "conf.awsMetaData.publicIpv4",
+                        "public-hostname": "conf.awsMetaData.publicHostname",
+                        "ami-manifest-path": "conf.awsMetaData.amiManifestPath",
+                        "local-ipv4": "conf.awsMetaData.localIpv4",
+                        "hostname": "conf.awsMetaData.dataCenterHostname",
+                        "ami-id": "conf.awsMetaData.amiId",
+                        "instance-type": "conf.awsMetaData.instanceType"
+                    }
+                }
+            }
+    },
+    "customMetaData":{
+    	"instance":{
+    	    "hostName":"172.17.0.3",
+    	    "instanceId":111,
+    	    "app":"",
+    	    "ipAddr":"172.17.0.3" ,
+    	    "vipAddress":"172.17.0.3:3000/solr",
+            "secureVipAddress":null,
+            "status":"UP",
+            "port":{
+                "$": "",
+        	"@enabled":"true"
+    	    },
+    	    "securePort": null,
+            "healthCheckUrl": null,
+            "statusPageUrl": null,
+            "leaseInfo":{
+          	"evictionDurationInSecs": 90
+             },
+           "dataCenterInfo":{
+        	"@class": "com.netflix.appinfo.MyDataCenterInfo",
+        	"name": "MyOwn"
+           } 
+    }  		
+  }
+}

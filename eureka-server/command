@@ -1,0 +1,2 @@
+docker build -t eureka-dev:latest ./docker
+TOMCAT_HOME=/tomcat/webapps/eureka/WEB-INF/classes; docker create --name eureka-server -p 8888:8080 -v `pwd`:$TOMCAT_HOME eureka-dev:latest; docker start eureka-server  
